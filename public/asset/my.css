@@ -1,4 +1,4 @@
-body{background-image:"url->{{asset('asset/img/bg.png')}}";
+body{background-image:url('/asset/bg.png');
   background-size: center;
   background-position: center;
   background-repeat: no-repeat;

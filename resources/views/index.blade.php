@@ -16,19 +16,16 @@
 
     
     <style>
-        table {
+        table,th,td {
+            background-color:rgb(200, 188, 220);
             padding: 13px;
-            border-spacing: 15px;
             border: 1px solid;
             margin: top 20px;
-            border-collapse: collapse;
             width: 1000px;
+            font-style:bold;
         }
 
-        th,
-        td {
-            padding: 13px;
-        }
+     
     </style>
 </head>
 <body>
@@ -47,15 +44,16 @@
         <thead>  
 
         <tr>
-                    <td>ID</td> 
-                    <td scope="col">Name</td>
-                    <td scope="col">Mail</td>
-                    <td scope="col">Address</td>
-                    <td scope="col">Password</td>
-                    <td scope="col">Period</td>
-                    <td scope="col">Language</td>
-                    <td scope="col">File</td>
-                    <td scope="col">Operations</td>
+                    <td scope="col"><b>ID</b></td> 
+                    <td scope="col"><b>Name</b></td>
+                    <td scope="col"><b>Mail</b></td>
+                    <td scope="col"><b>Address</b></td>
+                    <td scope="col"><b>Password</b></td>
+                    <td scope="col"><b>Period</b></td>
+                    <td scope="col"><b>Language</b></td>
+                    <td scope="col"><b>File</b></td>
+                    <td colspan="2"><b>Operations</b></td>
+                    
          </tr>
         
         </thead>  

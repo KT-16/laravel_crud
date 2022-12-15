@@ -205,10 +205,8 @@ class CrudsController extends Controller
         $delete_query = DB::delete("DELETE FROM `userlang` WHERE user_id='$id'");
         $langnew= $crud->langid = $request['lang'];  
        
-
         foreach ($langnew as $langinput) { 
                     $sql2 =DB::Insert("INSERT INTO `userlang`(`user_id`,`langid`) VALUES ('$id','$langinput')");
-           
         }
         return redirect('show');       
     }
