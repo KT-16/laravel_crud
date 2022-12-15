@@ -202,28 +202,15 @@ class CrudsController extends Controller
         $crud->period =  $request->get('period');
         $crud->file =  json_encode($data);  
         $crud->save(); 
-        
+        $delete_query = DB::delete("DELETE FROM `userlang` WHERE user_id='$id'");
         $langnew= $crud->langid = $request['lang'];  
-        $userlangold=DB::Select("SELECT * FROM `userlang` WHERE `user_id`='$id'");
-        $langarr = [];
-        foreach($userlangold as $row){
-            $langarr[]=$row->langid;
-        }
+       
 
         foreach ($langnew as $langinput) { 
-            if (!in_array( $langinput, $langarr)) {
-                            $sql2 =DB::Insert("INSERT INTO `userlang`(`user_id`,`langid`) VALUES ('$id','$langinput')");
-          }    
+                    $sql2 =DB::Insert("INSERT INTO `userlang`(`user_id`,`langid`) VALUES ('$id','$langinput')");
+           
         }
-        
-        foreach ($langarr as $row) {
-            if (!in_array($row, $langnew)) {
-                $delete_query = DB::delete("DELETE FROM `userlang` WHERE user_id='$id' AND langid='$row'");
-
-            }
-        }     
-        return redirect('show');
-        
+        return redirect('show');       
     }
 
         

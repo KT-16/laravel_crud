@@ -16,14 +16,14 @@ Route::get('/', function () {
 });
 Route::get('/create', 'CrudsController@create');
 Route::post('/store', 'CrudsController@store');
+Route::get('/login', 'CrudsController@login');
+Route::any('/loginverify', 'CrudsController@loginverify');
 Route::get('/show','CrudsController@index');
 Route::get('/new', 'CrudsController@new');
 Route::post('/add', 'CrudsController@add');
 Route::delete('/delete/{id}','CrudsController@destroy');
 Route::get('/edit/{id}','CrudsController@edit');
 Route::any('/update/{id}', 'CrudsController@update');
-Route::get('/login', 'CrudsController@login');
-Route::any('/loginverify', 'CrudsController@loginverify');
 Route::any('/logout', 'CrudsController@logout');
 
 
