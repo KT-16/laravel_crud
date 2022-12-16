@@ -43,7 +43,7 @@
         <table>  
         <thead>  
 
-        <tr>
+        <tr  style="font-size:20px">
                     <td scope="col"><b>ID</b></td> 
                     <td scope="col"><b>Name</b></td>
                     <td scope="col"><b>Mail</b></td>
